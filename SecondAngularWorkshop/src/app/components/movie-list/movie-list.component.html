@@ -1,0 +1,14 @@
+
+        <h3 class="text-info">Movie List</h3>
+            <ul class="list-group list-group-flush">
+                <div class="card" *ngFor="let movie1 of movies">
+                    <img class="card-img-top" *ngIf="movie1.flag" [src]="movie1.image"  height="100" width="100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{movie1.movie_name}}</h5>
+                        <button class="btn btn-success" (click)="toggleImage(movie1)">Toggle</button>
+                        <!-- <button class="btn btn-success" (click)="WatchList(movie1)"></button> -->
+
+                    </div>
+             </div>
+             </ul>
+      

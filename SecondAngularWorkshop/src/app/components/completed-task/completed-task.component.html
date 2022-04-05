@@ -1,0 +1,22 @@
+<h3 class="text-info">To do chores-list</h3>
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let list1 of ToDo">
+        {{list1}}
+    </li>
+</ul>
+<br><br>
+<h3 class="text-info">Completed chores-list</h3>
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let list2 of Completed">
+        {{list2}}
+    </li>
+</ul>
+<br><br>
+
+<div class='chores' *ngIf = "ToDo.length==Completed.length && Completed.length >= 4">
+    <P class="text-danger">You have Earned an icecream Treat</P>
+  </div>
+
+  <div class='chores' *ngIf = "ToDo.length>Completed.length ">
+    <P class="text-danger">Work Harder to achieve target</P>
+  </div>

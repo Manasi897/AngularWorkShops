@@ -1,0 +1,32 @@
+
+<h3 class="text-info">Yesterday's chores-list</h3>
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let list1 of Yesterday">
+        {{list1}}
+    </li>
+</ul>
+<br><br>
+<h3 class="text-info">Today's chores-list</h3>
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let list2 of Today">
+        {{list2}}
+    </li>
+</ul>
+<br><br>
+<h3 class="text-info">Tomorrow's chores-list</h3>
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let list3 of Tomorrow">
+        {{list3}}
+    </li>
+</ul>
+
+<h3 class="text-info">Target</h3>
+<div class='chores' *ngIf = "Yesterday.length <= Tomorrow.length || Today.length <= Tomorrow.length">
+   <P class="text-danger">Work Harder!!!!</P>
+ </div>
+
+ <div class='chores' *ngIf = "Yesterday.length > Tomorrow.length || Today.length > Tomorrow.length">
+    <P class="text-danger">Good to Go!!!!</P>
+  </div>
+
+  
